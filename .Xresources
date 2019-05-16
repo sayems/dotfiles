@@ -1,0 +1,26 @@
+!------------------
+!  rofi colors
+!------------------
+
+rofi.color-enabled: true
+rofi.color-window: #1e1e20, #2c5159, #2c5159
+rofi.color-normal: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159
+rofi.color-active: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159
+rofi.color-urgent: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159
+
+!------------------
+!  rofi settings
+!------------------
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 6
+rofi.font: Source Code Pro Semibold 15
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 5
+rofi.width: 30
+rofi.show-icons: true
+rofi.color-enabled: true
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
