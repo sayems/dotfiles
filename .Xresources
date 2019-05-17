@@ -4,14 +4,16 @@
 
 URxvt.internalBorder:	30
 URxvt.scrollBar:	false
+Xft.antialias: true
+URxvt*cursorBlink: true
 URxvt.letterSpace:	-1
 URxvt.cursorColor:	#191919
-URxvt.font: xft:Hack Nerd Font Mono:size=12
+URxvt.font: xft:Source Code Pro Semibold:size=12, xft:Hack Nerd Font Mono:size=12
 !! Larger history limit
 urxvt.saveLines: 1000000
 
 !! Perl extensions
-urxvt.perl-ext-common: default,matcher,font-size,clipboard
+urxvt.perl-ext-common: default,matcher,font-size,clipboard,ibeamcursor
 !! Open urls in browser with Control-Click
 urxvt.urlLauncher: /usr/bin/firefox
 urxvt.matcher.button: C1
@@ -53,50 +55,42 @@ rofi.hide-scrollbar: true
 
 
 !------------------
-!  Colors
+! Theme colors
 !------------------
+! special
+! special
+*.foreground:   #d3d0c8
+*.background:   #2d2d2d
+*.cursorColor:  #d3d0c8
 
-!
-! Generated with :
-! XRDB2Xreources.py
-!
-*.foreground:  #e5e5e5
-*.background:  #232322
-*.cursorColor: #16afca
-!
-! Black
-*.color0:      #212121
-*.color8:      #424242
-!
-! Red
-*.color1:      #b7141f
-*.color9:      #e83b3f
-!
-! Green
-*.color2:      #457b24
-*.color10:     #7aba3a
-!
-! Yellow
-*.color3:      #f6981e
-*.color11:     #ffea2e
-!
-! Blue
-*.color4:      #134eb2
-*.color12:     #54a4f3
-!
-! Magenta
-*.color5:      #560088
-*.color13:     #aa4dbc
-!
-! Cyan
-*.color6:      #0e717c
-*.color14:     #26bbd1
-!
-! White
-*.color7:      #efefef
-*.color15:     #d9d9d9
-!
-! Bold, Italic, Underline
-*.colorBD:     #b7141f
-!*.colorIT:
-!*.colorUL:
+! black
+*.color0:       #2d2d2d
+*.color8:       #747369
+
+! red
+*.color1:       #f2777a
+*.color9:       #f2777a
+
+! green
+*.color2:       #99cc99
+*.color10:      #99cc99
+
+! yellow
+*.color3:       #ffcc66
+*.color11:      #ffcc66
+
+! blue
+*.color4:       #6699cc
+*.color12:      #6699cc
+
+! magenta
+*.color5:       #cc99cc
+*.color13:      #cc99cc
+
+! cyan
+*.color6:       #66cccc
+*.color14:      #66cccc
+
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
