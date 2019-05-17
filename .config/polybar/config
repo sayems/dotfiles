@@ -1,3 +1,11 @@
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
 [bar/example]
 monitor = ${env:MONITOR}
 width = 100%
@@ -5,8 +13,8 @@ height = 27
 radius = 0
 fixed-center = false
 
-background = #00000000
-foreground = #c5c8c6
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 line-size = 3
 line-color =
@@ -20,9 +28,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-1 = "Font Awesome 5 Brands:style=Solid:size=10;1"
-font-2 = "Hack Nerd Font:size=10"
+font-0 = "Hack Nerd Font:size=10"
+font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 5 Brands:style=Solid:size=10;1"
 
 modules-left = i3
 modules-center = date
@@ -114,16 +122,16 @@ format-padding = 2
 
 label-open = %{F#F44336}
 label-open-foreground = #56737a
-label-close = %{F#8BC34A} Cancel
+label-close = %{F#8BC34A}Cancel
 label-close-foreground = #56737a
 label-separator = %{F#FFC107}|
 label-separator-foreground = #80969b
 
-menu-0-0 = %{F#FF9800} Reboot
+menu-0-0 = %{F#FF9800}Reboot
 menu-0-0-exec = menu-open-1
 menu-0-1 = %{F#F44336} Poweroff
 menu-0-1-exec = menu-open-2
-menu-0-2 = %{F#CDDC39} Logout
+menu-0-2 = %{F#CDDC39}Logout
 menu-0-2-exec = menu-open-3
 
 menu-1-0 = cancel

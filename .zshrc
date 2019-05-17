@@ -203,3 +203,5 @@ alias dot='/usr/bin/git --git-dir=/home/sayem/.dotfiles/ --work-tree=/home/sayem
 # zsh-completions
 autoload -U compinit && compinit
 
+# pywal
+(cat ~/.cache/wal/sequences &)
