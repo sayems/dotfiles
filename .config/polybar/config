@@ -16,7 +16,7 @@ height = 27
 radius = 0
 fixed-center = false
 
-background = ${colors.background}
+background = 0000000
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -31,21 +31,34 @@ padding-right = 0
 module-margin-left = 
 module-margin-right = 
 
-font-0 = "Hack Nerd Font:size=10"
-font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-2 = "Font Awesome 5 Brands:style=Solid:size=10;1"
+font-0 = "Source Code Pro Semibold:size=11"
+font-1 = "Hack Nerd Font:size=11"
+font-2 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-3 = "Font Awesome 5 Brands:style=Solid:size=10;1"
 
-modules-left = i3
-modules-center = 
+modules-left = arch
+modules-center = i3
 modules-right = arrow1 pulseaudio arrow2 bluetooth arrow3 date arrow4 powermenu
 
-tray-position = center
+# background = ${xrdb:color0:#222}
+# foreground = ${xrdb:color7:#222}
+# foreground-alt = ${xrdb:color7:#222}
+# primary = ${xrdb:color1:#222}
+# t4 = ${xrdb:color4:#222}
+# t5 = ${xrdb:color5:#222}
+# t6 = ${xrdb:color6:#222}
+# secondary = ${xrdb:color2:#222}
+# alert = ${xrdb:color3:#222}
+
+
+## Application Icon
+tray-position = none
 tray-detached = true
 tray-maxsize = 20
-tray-background = ${colors.background}
-tray-offset-x = 0
+
+tray-offset-x = 60
 tray-offset-y = 0
-tray-padding = 0
+tray-padding = 2
 tray-scale = 1.0
 
 cursor-click = pointer
@@ -54,9 +67,9 @@ cursor-scroll = ns-resize
 
 [module/arch]
 type = custom/text
-content = "  "
+content = "  "
 ;alt-icon = 
-content-padding = 0
+content-padding = 1
 click-left = ~/.config/polybar/menu
 
 
@@ -77,16 +90,6 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 ws-icon-default = " "
-
-# background = ${xrdb:color0:#222}
-# foreground = ${xrdb:color7:#222}
-# foreground-alt = ${xrdb:color7:#222}
-# primary = ${xrdb:color1:#222}
-# t4 = ${xrdb:color4:#222}
-# t5 = ${xrdb:color5:#222}
-# t6 = ${xrdb:color6:#222}
-# secondary = ${xrdb:color2:#222}
-# alert = ${xrdb:color3:#222}
 
 label-mode-padding = 2
 label-mode-foreground = #1e1e20
@@ -129,7 +132,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %a %b %d"
+date = " %a"
 date-alt = " %A, %B %d, %Y"
 time = %I:%M %p
 time-alt = ${self.time}
@@ -233,7 +236,7 @@ type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
 content-foreground = ${colors.primary}
-content-background = ${xrdb:color0:#222}
+content-background = #0000000
 # 1D2330
 
 [module/arrow2]
