@@ -13,7 +13,7 @@ height = 27
 radius = 0
 fixed-center = false
 
-background = ${colors.background}
+background = #cc000000
 foreground = ${colors.foreground}
 
 line-size = 3
