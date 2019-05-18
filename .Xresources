@@ -62,40 +62,27 @@ rofi.hide-scrollbar: true
 !------------------
 ! Theme colors
 !------------------
-! special
-! special
-*.foreground:   #d3d0c8
-*.background:   #2d2d2d
-*.cursorColor:  #d3d0c8
-
 ! black
-*.color0:       #2d2d2d
-*.color8:       #747369
-
+*color0: #435B67
+*color8: #A1B0B8
 ! red
-*.color1:       #f2777a
-*.color9:       #f2777a
-
+*color1: #FC3841
+*color9: #FC746D
 ! green
-*.color2:       #99cc99
-*.color10:      #99cc99
-
+*color2: #5CF19E
+*color10: #ADF7BE
 ! yellow
-*.color3:       #ffcc66
-*.color11:      #ffcc66
-
+*color3: #FED032
+*color11: #FEE16C
 ! blue
-*.color4:       #6699cc
-*.color12:      #6699cc
-
+*color4: #37B6FF
+*color12: #70CFFF
 ! magenta
-*.color5:       #cc99cc
-*.color13:      #cc99cc
-
+*color5: #FC226E
+*color13: #FC669B
 ! cyan
-*.color6:       #66cccc
-*.color14:      #66cccc
-
+*color6: #59FFD1
+*color14: #9AFFE6
 ! white
-*.color7:       #d3d0c8
-*.color15:      #f2f0ec
+*color7: #FFFFFF
+*color15: #FFFFFF

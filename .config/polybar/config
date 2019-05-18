@@ -3,6 +3,9 @@ background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color7:#222}
 primary = ${xrdb:color1:#222}
+t4 = ${xrdb:color4:#222}
+t5 = ${xrdb:color5:#222}
+t6 = ${xrdb:color6:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
@@ -13,7 +16,7 @@ height = 27
 radius = 0
 fixed-center = false
 
-background = #cc000000
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -23,10 +26,10 @@ border-size = 0
 border-color =
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 
+module-margin-right = 
 
 font-0 = "Hack Nerd Font:size=10"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
@@ -34,7 +37,7 @@ font-2 = "Font Awesome 5 Brands:style=Solid:size=10;1"
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio bluetooth date powermenu
+modules-right = arrow1 pulseaudio arrow2 bluetooth arrow3 date arrow4 powermenu
 
 tray-position = center
 tray-detached = true
@@ -63,29 +66,50 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = " "
+
+# background = ${xrdb:color0:#222}
+# foreground = ${xrdb:color7:#222}
+# foreground-alt = ${xrdb:color7:#222}
+# primary = ${xrdb:color1:#222}
+# t4 = ${xrdb:color4:#222}
+# t5 = ${xrdb:color5:#222}
+# t6 = ${xrdb:color6:#222}
+# secondary = ${xrdb:color2:#222}
+# alert = ${xrdb:color3:#222}
+
 label-mode-padding = 2
 label-mode-foreground = #1e1e20
 label-mode-background = #56737a
 
-label-focused = %index%
-label-focused-background = #2c5159
-label-focused-foreground = #6b7443
+label-focused = %icon% %name% 
+label-focused-background = ${colors.alert}
+label-focused-foreground = #000000
 label-focused-padding = 2
 
-label-unfocused = %index%
-label-unfocused-background = #56737a
-label-unfocused-foreground = #1e1e20
+label-unfocused = %icon% %name%
+label-unfocused-background = ${colors.primary}
+label-unfocused-foreground = #000000
 label-unfocused-padding = 2
 
-label-visible = %index%
-label-visible-background = #56737a
-label-visible-foreground = #1e1e20
+label-visible = %icon% %name% 
+label-visible-background = ${colors.t5}
+label-visible-foreground = #000000
 label-visible-padding = 2
 
-label-urgent = %index%
+label-urgent = %icon% %name% 
 label-urgent-background = #BA2922
 label-urgent-padding = 2
-
 
 [module/eth]
 type = internal/network
@@ -111,31 +135,31 @@ time = %I:%M %p
 time-alt = ${self.time}
 
 format-prefix = 
-format-foreground = 
-format-background = 
+format-foreground = #000000
+format-background = ${colors.t4}
 format-padding = 1
 
-label = %{F#fff}%date%%{F-}  %{F#fff}%time%%{F-}
+label = %date%  %time%
 
 [module/powermenu]
 type = custom/menu
 
 expand-right = true
 format-spacing = 1
-format-padding = 1
+format-padding = 2
 
-label-open = %{F#F44336}
+label-open = %{F#000000}
 label-open-foreground = #56737a
-label-close = %{F#8BC34A}Cancel
+label-close = %{F#000000}Cancel
 label-close-foreground = #56737a
-label-separator = %{F#FFC107}|
+label-separator = %{F#000000}|
 label-separator-foreground = #80969b
 
-menu-0-0 = %{F#FF9800}Reboot
+menu-0-0 = %{F#000000}Reboot
 menu-0-0-exec = menu-open-1
-menu-0-1 = %{F#F44336} Poweroff
+menu-0-1 = %{F#000000} Poweroff
 menu-0-1-exec = menu-open-2
-menu-0-2 = %{F#CDDC39}Logout
+menu-0-2 = %{F#000000}Logout
 menu-0-2-exec = menu-open-3
 
 menu-1-0 = cancel
@@ -153,6 +177,8 @@ menu-3-0-exec = pkill -KILL -u $USER
 menu-3-1 = cancel
 menu-3-1-exec = menu-open-0
 
+format-background =${colors.alert}
+
 [settings]
 screenchange-reload = true
 
@@ -165,10 +191,12 @@ type = internal/pulseaudio
 
 # sink=alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo
 # sink=bluez_sink.E9_08_EF_82_B7_95.a2dp_sink
+label-volume-padding = 1
+label-volume-background = ${colors.primary}
 
 format-volume = <label-volume>
 label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = #000000
 
 label-muted = 
 label-muted-foreground = #66
@@ -193,5 +221,58 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/bluetooth]
 type = custom/script
 interval = 5
-
+format-foreground = #000000
+format-background = ${colors.t6}
+format-padding = 1
 exec = ~/.config/polybar/bluetooth.sh
+
+
+[module/arrow1]
+; grey to Blue
+type = custom/text
+content = "%{T2} %{T-}"
+content-font = 2
+content-foreground = ${colors.primary}
+content-background = ${xrdb:color0:#222}
+# 1D2330
+
+[module/arrow2]
+; grey to Blue
+type = custom/text
+content = "%{T2} %{T-}"
+content-font = 2
+content-foreground = ${colors.t6}
+content-background = ${colors.primary}
+
+[module/arrow3]
+; grey to Blue
+type = custom/text
+content = "%{T2} %{T-}"
+content-font = 2
+content-foreground = ${colors.t4}
+content-background = ${colors.t6}
+
+[module/arrow4]
+; grey to Blue
+type = custom/text
+content = "%{T2} %{T-}"
+content-font = 2
+content-foreground = ${colors.alert}
+content-background = ${colors.t4}
+
+[module/arrow5]
+; grey to Blue
+type = custom/text
+content = "%{T2} %{T-}"
+content-font = 2
+content-foreground = ${colors.secondary}
+content-background = ${colors.alert}
+
+[module/arrow6]
+; grey to Blue
+type = custom/text
+content = "%{T2} %{T-}"
+content-font = 2
+content-foreground = ${xrdb:color0:#222}
+# 1D2330
+content-background = ${colors.secondary}
