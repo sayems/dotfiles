@@ -32,24 +32,13 @@ module-margin-left =
 module-margin-right = 
 
 font-0 = "Source Code Pro Semibold:size=11"
-font-1 = "Hack Nerd Font:size=11"
+font-1 = "FontAwesome:style=Regular:size=11"
 font-2 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-3 = "Font Awesome 5 Brands:style=Solid:size=10;1"
+font-3 = "Font Awesome 5 Brands:style=Regular:size=10;1"
 
 modules-left = arch
 modules-center = i3
 modules-right = arrow1 pulseaudio arrow2 bluetooth arrow3 date arrow4 powermenu
-
-# background = ${xrdb:color0:#222}
-# foreground = ${xrdb:color7:#222}
-# foreground-alt = ${xrdb:color7:#222}
-# primary = ${xrdb:color1:#222}
-# t4 = ${xrdb:color4:#222}
-# t5 = ${xrdb:color5:#222}
-# t6 = ${xrdb:color6:#222}
-# secondary = ${xrdb:color2:#222}
-# alert = ${xrdb:color3:#222}
-
 
 ## Application Icon
 tray-position = none
@@ -114,6 +103,7 @@ label-urgent = %icon% %name%
 label-urgent-background = #BA2922
 label-urgent-padding = 2
 
+
 [module/eth]
 type = internal/network
 interface = enp7s0
@@ -127,6 +117,7 @@ format-connected-prefix-foreground = #80969b
 label-connected = %local_ip%
 
 format-disconnected =
+
 
 [module/date]
 type = internal/date
@@ -145,42 +136,12 @@ format-padding = 1
 label = %date%  %time%
 
 [module/powermenu]
-type = custom/menu
-
-expand-right = true
-format-spacing = 1
-format-padding = 2
-
-label-open = %{F#000000}
-label-open-foreground = #56737a
-label-close = %{F#000000}Cancel
-label-close-foreground = #56737a
-label-separator = %{F#000000}|
-label-separator-foreground = #80969b
-
-menu-0-0 = %{F#000000}Reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = %{F#000000} Poweroff
-menu-0-1-exec = menu-open-2
-menu-0-2 = %{F#000000}Logout
-menu-0-2-exec = menu-open-3
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
-
-menu-2-0 = power off
-menu-2-0-exec = poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-menu-3-0 = log off
-menu-3-0-exec = pkill -KILL -u $USER
-menu-3-1 = cancel
-menu-3-1-exec = menu-open-0
-
-format-background =${colors.alert}
+type = custom/text
+content = 
+content-padding = 2
+content-background =${colors.alert}
+content-foreground = #000000
+click-left = ~/.config/polybar/pmenu
 
 [settings]
 screenchange-reload = true
@@ -202,7 +163,9 @@ label-volume =  %percentage%%
 label-volume-foreground = #000000
 
 label-muted = 
-label-muted-foreground = #66
+label-muted-padding = 1
+label-muted-foreground = #000000
+label-muted-background = ${colors.primary}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
