@@ -1,0 +1,88 @@
+!--------------!
+! URXVT CONFIG !
+!--------------!
+
+URxvt.internalBorder:	30
+URxvt.scrollBar:	false
+Xft.antialias: true
+URxvt*cursorBlink: true
+URxvt.letterSpace:	-1
+URxvt.cursorColor:	#191919
+URxvt.font: xft:Source Code Pro Semibold:size=12, xft:Hack Nerd Font Mono:size=12
+!! Larger history limit
+urxvt.saveLines: 1000000
+
+!! Perl extensions
+urxvt.perl-ext-common: default,matcher,font-size,clipboard,ibeamcursor
+!! Open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+!! Change font size on Control-Plus/Minus
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+!! Transparency
+URxvt*inheritPixmap: true
+URxvt*transparent: true
+! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt*shading: 25
+
+!------------------
+!  rofi colors
+!------------------
+
+rofi.color-enabled: true
+rofi.color-window: #1e1e20, #2c5159, #2c5159
+rofi.color-normal: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159
+rofi.color-active: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159
+rofi.color-urgent: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #2c5159
+
+!------------------
+!  rofi settings
+!------------------
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 6
+rofi.font: Source Code Pro Semibold 15
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 5
+rofi.width: 30
+rofi.show-icons: true
+rofi.color-enabled: true
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
+
+
+!------------------
+! Theme colors
+!------------------
+! black
+*color0: #435B67
+*color8: #A1B0B8
+! red
+*color1: #FC3841
+*color9: #FC746D
+! green
+*color2: #5CF19E
+*color10: #ADF7BE
+! yellow
+*color3: #FED032
+*color11: #FEE16C
+! blue
+*color4: #37B6FF
+*color12: #70CFFF
+! magenta
+*color5: #FC226E
+*color13: #FC669B
+! cyan
+*color6: #59FFD1
+*color14: #9AFFE6
+! white
+*color7: #FFFFFF
+*color15: #FFFFFF

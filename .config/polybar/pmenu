@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Created By Aditya Shakya
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -yoffset 35 -xoffset -6 -width 15 -hide-scrollbar -line-padding 3 -padding 20 -lines 4 -font "Source Code Pro 13" <<< " Lock| Logout| Hibernate| Reboot| Shutdown")"
+            case "$MENU" in
+                *Lock) i3lock-fancy ;;
+                *Logout) pkill -KILL -u $USER ;;
+                *Hibernate) systemctl hibernate ;;
+                *Reboot) systemctl reboot ;;
+                *Shutdown) systemctl -i poweroff
+            esac
