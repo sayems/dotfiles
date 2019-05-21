@@ -165,6 +165,8 @@ for_window [class="Nautilus"]                   floating enable border normal
 for_window [title="Hangouts"]                   floating enable border normal
 for_window [class="Slack"]                      floating enable border normal
 for_window [class="calculator"]                 floating enable border normal
+for_window [class="Transmission"]               floating enable border normal
+for_window [class="vlc"]                        floating enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -230,6 +232,12 @@ exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id /$HOME/.config/polybar/launch.sh
+
+# GNOME
+# exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+# exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id gnome-flashback
 
 # Theme colors
 client.focused #56737a #1e1e20 #56737a #56737a #56737a
