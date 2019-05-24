@@ -27,6 +27,7 @@ set signcolumn=yes
 " Enableing mouse
 if has('mouse')
     set mouse=a
+    set clipboard=unnamedplus
 endif
 
 " VIM Plugin
