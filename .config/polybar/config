@@ -130,7 +130,7 @@ time-alt = ${self.time}
 
 format-prefix = 
 format-foreground = #000000
-format-background = #FF9800
+format-background = ${colors.t4}
 format-padding = 1
 
 label = %date%  %time%
@@ -139,7 +139,7 @@ label = %date%  %time%
 type = custom/text
 content = 
 content-padding = 2
-content-background = #E53935
+content-background = ${colors.alert}
 content-foreground = #000000
 click-left = ~/.config/polybar/pmenu
 
@@ -156,7 +156,7 @@ type = internal/pulseaudio
 # sink=alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo
 # sink=bluez_sink.E9_08_EF_82_B7_95.a2dp_sink
 label-volume-padding = 1
-label-volume-background = #9C27B0
+label-volume-background = ${colors.primary}
 
 format-volume = <label-volume>
 label-volume =  %percentage%%
@@ -165,7 +165,7 @@ label-volume-foreground = #000000
 label-muted = 
 label-muted-padding = 1
 label-muted-foreground = #000000
-label-muted-background = #9C27B0
+label-muted-background = ${colors.primary}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -188,7 +188,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = custom/script
 interval = 5
 format-foreground = #000000
-format-background = #43A047
+format-background = ${colors.t6}
 format-padding = 1
 exec = ~/.config/polybar/bluetooth.sh
 
@@ -198,7 +198,7 @@ exec = ~/.config/polybar/bluetooth.sh
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #9C27B0
+content-foreground = ${colors.primary}
 content-background = #0000000
 # 1D2330
 
@@ -207,24 +207,24 @@ content-background = #0000000
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #43A047
-content-background = #9C27B0
+content-foreground = ${colors.t6}
+content-background = ${colors.primary}
 
 [module/arrow3]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #FF9800
-content-background = #43A047
+content-foreground = ${colors.t4}
+content-background = ${colors.t6}
 
 [module/arrow4]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #E53935
-content-background = #FF9800
+content-foreground = ${colors.alert}
+content-background = ${colors.t4}
 
 [module/arrow5]
 ; grey to Blue
