@@ -130,7 +130,7 @@ time-alt = ${self.time}
 
 format-prefix = 
 format-foreground = #000000
-format-background = ${colors.t4}
+format-background = #9E9D24
 format-padding = 1
 
 label = %date%  %time%
@@ -139,7 +139,7 @@ label = %date%  %time%
 type = custom/text
 content = 
 content-padding = 2
-content-background =${colors.alert}
+content-background = #E53935
 content-foreground = #000000
 click-left = ~/.config/polybar/pmenu
 
@@ -188,7 +188,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = custom/script
 interval = 5
 format-foreground = #000000
-format-background = ${colors.t6}
+format-background = #43A047
 format-padding = 1
 exec = ~/.config/polybar/bluetooth.sh
 
@@ -207,7 +207,7 @@ content-background = #0000000
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = ${colors.t6}
+content-foreground = #43A047
 content-background = ${colors.primary}
 
 [module/arrow3]
@@ -215,16 +215,16 @@ content-background = ${colors.primary}
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = ${colors.t4}
-content-background = ${colors.t6}
+content-foreground = #9E9D24
+content-background = #43A047
 
 [module/arrow4]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = ${colors.alert}
-content-background = ${colors.t4}
+content-foreground = #E53935
+content-background = #9E9D24
 
 [module/arrow5]
 ; grey to Blue
