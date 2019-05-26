@@ -16,7 +16,7 @@ height = 27
 radius = 0
 fixed-center = false
 
-background = 0000000
+background = #AA2F343F
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -139,7 +139,7 @@ label = %date%  %time%
 type = custom/text
 content = 
 content-padding = 2
-content-background =${colors.alert}
+content-background = ${colors.alert}
 content-foreground = #000000
 click-left = ~/.config/polybar/pmenu
 

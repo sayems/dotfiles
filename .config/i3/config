@@ -167,6 +167,7 @@ for_window [class="Slack"]                      floating enable border normal
 for_window [class="calculator"]                 floating enable border normal
 for_window [class="Transmission"]               floating enable border normal
 for_window [class="vlc"]                        floating enable border normal
+for_window [class="okular"]                     floating enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
