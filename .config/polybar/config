@@ -41,13 +41,13 @@ modules-center = i3
 modules-right = arrow1 pulseaudio arrow2 bluetooth arrow3 date arrow4 powermenu
 
 ## Application Icon
-tray-position = none
+tray-position = left
 tray-detached = true
 tray-maxsize = 20
 
-tray-offset-x = 60
+tray-offset-x = 40
 tray-offset-y = 0
-tray-padding = 2
+tray-padding = 3
 tray-scale = 1.0
 
 cursor-click = pointer
