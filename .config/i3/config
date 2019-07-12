@@ -170,6 +170,7 @@ for_window [class="vlc"]                        floating enable border normal
 for_window [class="okular"]                     floating enable border normal
 for_window [class="monitor"]                    floating enable border normal
 for_window [class="Google-chrome"]              floating enable border normal
+for_window [class="Firefox"]              floating enable border normal
 
 
 # switch to workspace with urgent window automatically
